@@ -1,7 +1,6 @@
 export default function courseReducer(state = [], action) {
   switch(action.type) {
     case 'CREATE_COURSE':
-      debugger;
       return [...state,
         Object.assign({}, action.course)
       ];
@@ -10,4 +9,4 @@ export default function courseReducer(state = [], action) {
       return state;
   }
 }
-//state.push(action.course)
+//state.push(action.course) not allowed coz' in this way we mutate our state
