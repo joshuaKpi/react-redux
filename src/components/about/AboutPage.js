@@ -1,17 +1,19 @@
 import React from 'react';
 import initialState from '../../reducers/initialState';
+import toastr from 'toastr';
 
 
 class AboutPage extends React.Component {
   static onEnterCall() {
-  console.log('onEnter hook triggered');
+  toastr.info('onEnter hook triggered', '', {"positionClass": "toast-bottom-right"});
   initialState.counter++;
   window.localStorage.setItem('onEnterHookCounter', initialState.counter);
 }
 
   static onLeaveCall() {
-  console.log('onLeave hook triggered');
-}
+  toastr.warning('onLeave hook triggered', '', {"positionClass": "toast-bottom-right"});
+
+  }
   render() {
     return (
       <div>
