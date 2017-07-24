@@ -15,7 +15,8 @@ describe('Manage Course Page', () => {
         authorId: '',
         length: '',
         category: ''
-      }
+      },
+      match: {}
     };
     const wrapper = mount(<ManageCoursePage {...props}/>);
     const saveButton = wrapper.find('input').last();
