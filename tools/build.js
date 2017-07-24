@@ -5,11 +5,11 @@ import colors from 'colors';
 
 process.env.NODE_ENV = 'production';
 
-console.log('Generating minified bundle for production via webpack'.blue);
+console.log(colors.blue('Generating minified bundle for production via webpack'));
 
 webpack(webpackConfig).run((err, stats) => {
   if (err) {
-    console.log(err.bold.red);
+    console.log(colors.red(err));
     return 1;
   }
 
@@ -20,14 +20,14 @@ webpack(webpackConfig).run((err, stats) => {
   }
 
   if (jsonStats.hasWarnings) {
-    console.log('Webpack generated the following warnings: '.bold.yellow);
-    jsonStats.warnings.map(warning => console.log(warning.yellow));
+    console.log(colors.yellow.bold('Webpack generated the following warnings: ');
+    jsonStats.warnings.map(warning => console.log(colors.yellow(warning));
   }
 
   console.log(`Webpack stats: ${stats}`);
 
   // if we got this far, the build succeeded.
-  console.log('Your app has been compiled in production mode and written to /dist'.green);
+  console.log(colors.green('Your app has been compiled in production mode and written to /dist'));
 
   return 0;
 });
