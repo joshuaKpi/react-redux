@@ -6,7 +6,10 @@ import toastr from 'toastr';
 class AboutPage extends React.Component {
 
   componentWillMount() {
-    toastr.info('onEnter "event" triggered in meaning of router v4', '', {"positionClass": "toast-bottom-right"});
+    setTimeout(() =>
+      toastr.info('onEnter "event" triggered in meaning of router v4', '', {"positionClass": "toast-bottom-right"}),
+      1000
+    );
     initialState.counter++;
     window.localStorage.setItem('onEnterHookCounter', initialState.counter);
   }
@@ -19,7 +22,7 @@ class AboutPage extends React.Component {
     return (
       <div>
         <h1>About</h1>
-        <p>Sone particular paragraph about this site created to train skills</p>
+        <p>Some particular paragraph about this site created to train skills</p>
       </div>
     );
   }
