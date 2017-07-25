@@ -43,6 +43,14 @@ const courses = [
     authorId: "cory-house",
     length: "5:10",
     category: "HTML5"
+  },
+  {
+    id: "javascript-development-environment",
+    title: "Building a JavaScript Development Environment ",
+    watchHref: "http://www.pluralsight.com/courses/javascript-development-environment",
+    authorId: "cory-house",
+    length: "5:19",
+    category: "JavaScript"
   }
 ];
 
