@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import LoadingDots from './LoadingDots';
 
 const Header = ({loading}) => {
-  const activeStyle = { color: 'blue' };
+  const activeStyle = { color: 'orange' };
   return (
     <nav>
       <NavLink to="/" activeStyle={activeStyle} exact>Home</NavLink>

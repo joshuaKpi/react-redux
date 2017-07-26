@@ -7,8 +7,10 @@ import CourseList from './CourseList';
 import {withRouter} from 'react-router-dom';
 
 class CoursesPage extends React.Component {
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
+
+    this.redirectToAddCoursePage = this.redirectToAddCoursePage.bind(this);
   }
 
   courseRow(course, index) {
@@ -57,7 +59,7 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(CoursesPage));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CoursesPage));
 
 // const connectedStateAndProps = connect(mapStateToProps, mapDispatchToProps);
 //export default connectedStateAndProps(CoursePage);
